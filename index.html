@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+  <title>Tshepiso Moloko</title>
+  <body>
+    <!-- This is the @head and it will encompass our logo and our navigation bar -->
+    <head>
+      <div>
+        <table style="width: 100%">
+          <tr>
+            <td>
+              <a href="#">
+                <img src="assets/logo/logo-1932539__340.png" width="100px" alt="" />
+              </a>
+            </td>
+            <td align="right">
+              <nav
+                style="
+                  margin-right: 50px;
+                  margin-top: 16px;
+                  margin-bottom: 16px;
+                  margin-left: 50px;
+                "
+              >
+                <div class="mode" style="padding-left: 20vh;">
+                  Dark mode:			
+                  <span class="change">OFF</span>
+                </div>
+                <a href="#">Home</a>
+                <a href="about_us.html" style="margin: 16px">About Us</a>
+                <a href="contact_us.html">Contact Us</a>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
+	              </script>
+                <style>
+                  body{
+                  padding:10% 3% 10% 3%;
+                  text-align:center;
+                  }
+                  img{
+                    height:140px;
+                      width:140px;
+                  }
+                  h1{
+                  color: #32a852;
+                  }
+                  .mode {
+                    float:right;
+                  }
+                  .change {
+                    cursor: pointer;
+                    border: 1px solid #555;
+                    border-radius: 40%;
+                    width: 20px;
+                    text-align: center;
+                    padding: 5px;
+                    margin-left: 8px;
+                  }
+                  .dark{
+                    background-color: #222;
+                    color: #e6e6e6;
+                  }
+                </style>
+              </nav>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </head>
+
+    <!-- This is our main and it will encompass all our content for the landing page for our site -->
+    <main>
+      <script>
+        $( ".change" ).on("click", function() {
+          if( $( "body" ).hasClass( "dark" )) {
+            $( "body" ).removeClass( "dark" );
+            $( ".change" ).text( "OFF" );
+          } else {
+            $( "body" ).addClass( "dark" );
+            $( ".change" ).text( "ON" );
+          }
+        });
+      </script>
+      <table style="width: 100%; height: 300px">
+        <tr>
+          <td colspan="2">
+            <img
+              src="assets/imgs/logo-1933884__340.jpeg"
+              width="100%"
+              height="600px"
+              alt=""
+              style="object-fit: cover"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: 20vh; padding-top: 50px">
+            <h1>Tshepiso Moloko</h1>
+            <p style="width: ">
+              Small town boy with big dreams. <br />
+              Hard work is the name of the day.<br />
+              Aluta continua!
+            </p>
+            <input type="text" placeholder="Twigs538">
+          </td>
+          <td align="right" style="padding-right: 20vh; padding-top: 30px; padding-bottom: 30px">
+            <img
+              src="assets/imgs/family-7727035__340.jpeg"
+              alt=""
+              width="300px"
+              height="300px"
+              style="border-radius: 50%; object-fit: cover; border: 5px solid green;"
+            />
+          </td>
+        </tr>
+      </table>
+    </main>
+
+    <!-- This is our footer and it will encompass all the quick links on our website.-->
+    <footer>
+      <table style="width: 100%; height: 100px; background-color: green;">
+        <tr>
+          <td style="padding-left: 20vh;">Address: Carletonville, Gauteng</td>
+          <td colspan="2" style="padding-left: 20vh;">
+            <iframe src="https://maps.google.com/maps?q=-26.3856428,27.4054195&t=&z=13&ie=UTF8&iwloc=&output=embed" >
+            </iframe>
+          </td>
+        </tr>
+        <tr>
+          <td style="padding-left: 20vh;">Social links: https://www.github.com/twigs538</td>
+          <td style="padding-left: 20vh;">Cell: 0610127228</td>
+        </tr>
+      </table>
+    </footer>
+  </body>
+</html>
