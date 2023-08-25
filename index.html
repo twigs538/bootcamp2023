@@ -1,103 +1,94 @@
 <!DOCTYPE html>
-<html>
-  <title>Tshepiso Moloko</title>
-  <body>
-    <link rel="stylesheet" href="./style.css"/>
-    <!-- This is the @head and it will encompass our logo and our navigation bar -->
-    <head>
-      <div>
-        <table style="width: 100%">
-          <tr>
-            <td>
-              <a href="#">
-                <img src="assets/logo/logo-1932539__340.png" width="100px" alt="" />
-              </a>
-            </td>
-            <td align="right">
-              <nav
-                style="
-                  margin-right: 50px;
-                  margin-top: 16px;
-                  margin-bottom: 16px;
-                  margin-left: 50px;
-                "
-              >
-                <div class="mode" style="padding-left: 20vh;">
-                  Dark mode:			
-                  <span class="change">OFF</span>
-                </div>
-                <a href="#">Home</a>
-                <a href="about_us.html" style="margin: 16px">About Us</a>
-                <a href="contact_us.html">Contact Us</a>
-                <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js">
-	              </script>
-              </nav>
-            </td>
-          </tr>
-        </table>
-      </div>
-    </head>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<style>
+  :root {
+    --primary-color: #3498db;
+  }
 
-    <!-- This is our main and it will encompass all our content for the landing page for our site -->
+  body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+  }
+
+  header {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+  }
+
+  main {
+    padding: 2rem;
+  }
+
+  footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 1rem;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1rem;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+  @keyframes buttonHover {
+    from {
+      transform: scale(1);
+    }
+    to {
+      transform: scale(1.1);
+    }
+  }
+
+  .button {
+    background-color: var(--primary-color);
+    color: white;
+    padding: 0.5rem 1rem;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    animation: buttonHover 0.3s ease-in-out alternate-reverse infinite;
+  }
+
+  @media screen and (min-width: 768px) {
+    .container {
+      grid-template-columns: 1fr 2fr;
+    }
+  }
+
+  @media screen and (min-width: 1024px) {
+    .container {
+      grid-template-columns: repeat(3, 1fr);
+    }
+  }
+</style>
+<title>Responsive Animated Webpage</title>
+</head>
+<body>
+  <header>
+    <h1>Coding Allstars</h1>
+  </header>
+  <div class="container">
     <main>
-      <script>
-        $( ".change" ).on("click", function() {
-          if( $( "body" ).hasClass( "dark" )) {
-            $( "body" ).removeClass( "dark" );
-            $( ".change" ).text( "OFF" );
-          } else {
-            $( "body" ).addClass( "dark" );
-            $( ".change" ).text( "ON" );
-          }
-        });
-      </script>
-      <table style="width: 100%; height: 300px">
-        <tr>
-          <td colspan="2">
-            <video width="100%" height="500px" style="object-fit: cover" controls="autoplay" autoplay>
-              <source src="./assets/video/Jellyfish - 110877.mp4">
-              Your browser does not support the video tag.
-            </video>    
-          </td>
-        </tr>
-        <tr>
-          <td style="padding-left: 20vh; padding-top: 50px">
-            <h1>Tshepiso Moloko</h1>
-            <p style="width: ">
-              Small town boy with big dreams. <br />
-              Hard work is the name of the day.<br />
-              Aluta continua!
-            </p>
-            <input type="text" placeholder="Twigs538">
-          </td>
-          <td align="right" style="padding-right: 20vh; padding-top: 30px; padding-bottom: 30px">
-            <img
-              src="assets/imgs/family-7727035__340.jpeg"
-              alt=""
-              width="300px"
-              height="300px"
-              style="border-radius: 50%; object-fit: cover; border: 5px solid green;"
-            />
-          </td>
-        </tr>
-      </table>
+      <h2>Welcome to Coding Allstars</h2>
+      <p>This is the main content of the webpage.</p>
+      <button class="button">Hover Me</button>
     </main>
-
-    <!-- This is our footer and it will encompass all the quick links on our website.-->
-    <footer>
-      <table style="width: 100%; height: 100px; background-color: green;">
-        <tr>
-          <td style="padding-left: 20vh;">Address: Carletonville, Gauteng</td>
-          <td colspan="2" style="padding-left: 20vh;">
-            <iframe src="https://maps.google.com/maps?q=-26.3856428,27.4054195&t=&z=13&ie=UTF8&iwloc=&output=embed" >
-            </iframe>
-          </td>
-        </tr>
-        <tr>
-          <td style="padding-left: 20vh;">Social links: https://www.github.com/twigs538</td>
-          <td style="padding-left: 20vh;">Cell: 0610127228</td>
-        </tr>
-      </table>
-    </footer>
-  </body>
+    <aside>
+      <h3>Sidebar</h3>
+      <p>This is the sidebar content.</p>
+    </aside>
+  </div>
+  <footer>
+    <p>&copy; 2023 Coding Allstars. All rights reserved.</p>
+  </footer>
+</body>
 </html>
